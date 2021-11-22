@@ -1,0 +1,9 @@
+<h1> You are not logged in ! Log in!</h1>
+
+<form [formGroup]="loginForm">
+  UserName:
+  <input type="text" formControlName="userName" >
+  Password
+  <input type="text" formControlName="password">
+  <button (click)="logUserIn()">Login</button>
+</form>
