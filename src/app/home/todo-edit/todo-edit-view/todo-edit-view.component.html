@@ -1,0 +1,13 @@
+<form [formGroup]="editForm">
+  <mat-form-field appearance="fill">
+    <mat-label>Summary</mat-label>
+    <input matInput placeholder="pat@example.com" formControlName="summary" required>
+    <mat-error *ngIf="hasErrorOnControl('summary')">Required</mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Description</mat-label>
+    <input matInput placeholder="pat@example.com" formControlName="description" required>
+    <mat-error *ngIf="hasErrorOnControl('description')">Required</mat-error>
+  </mat-form-field>
+</form>
+<button (click)="newTodo()" [disabled]="editForm.invalid">Add</button>
